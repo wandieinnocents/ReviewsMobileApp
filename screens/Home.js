@@ -17,12 +17,18 @@ export default function Home({ navigation}){
     }
     return(
         <View style={globalStyles.container}>
-            <Text style={globalStyles.titleText}> Home Screen </Text>
+        {/* curve */}
+        <View style={styles.curve}>
+
+            
+
+        </View>
+
             <Button 
                 title='REVIEW'
                 onPress={pressHandler}
             />
-            <Text style={globalStyles.titleText}> Home Screen </Text>
+            <Text style={globalStyles.titleText}> Hoames Screen </Text>
 
                <Button 
                 title='ABOUT'
@@ -38,5 +44,16 @@ export default function Home({ navigation}){
 const styles = StyleSheet.create({
     container:{
         padding:24
-    }
+    },
+
+    curve:{
+        padding:100,
+        
+        backgroundColor:'blue',
+        height:80,
+        borderBottomLeftRadius:200,
+        borderBottomRightRadius:200,
+       
+    },
+
 });
