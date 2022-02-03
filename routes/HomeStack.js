@@ -9,20 +9,44 @@ import About from '../screens/About';
 const screens = {
     Home: {
         screen: Home,
+        navigationOptions:{
+            title:'Home',
+            headerStyle:{ backgroundColor:'coral'}
+        }
     },
     ReviewDetails : {
-        screen: ReviewDetails
+        screen: ReviewDetails,
+        navigationOptions:{
+            title:'Review Details',
+            headerStyle:{ backgroundColor:'coral'}
+            
+        }
     },
     Reviews:{
-        screen: Reviews
+        screen: Reviews,
+        navigationOptions:{
+            title:'Reviews',
+            // headerStyle:{ backgroundColor:'coral'}
+        }
     },
     About: {
-        screen: About
+        screen: About,
+        navigationOptions:{
+            title:'About',
+            // headerStyle:{ backgroundColor:'coral'}
+        }
     }
 }
 
 // create home stack navigator
-const HomeStack = createStackNavigator(screens);
+const HomeStack = createStackNavigator(screens, {
+    defaultNavigationOptions: {
+        headerStyle:{ backgroundColor:'coral',
+        // headerTintColor: 'coral',
+            
+    }
+    }
+});
 
 // export app container with
 export default createAppContainer(HomeStack);
